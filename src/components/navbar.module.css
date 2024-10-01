@@ -1,0 +1,90 @@
+@import '../vars.css';
+
+.navbar{
+    position: relative;
+    display: flex;
+    align-items:center;
+    justify-content:  space-between;
+    padding: 40px;
+    z-index: 2;
+    margin: 0% 10%;
+}
+
+.title{
+    font-size: 30px;
+    margin-left: -40px;
+    font-weight: 600;
+    color: var(--color-text);
+    text-decoration: none;
+
+}
+.menu{
+    display: flex;
+}
+
+.menuitem{
+    display: flex;
+    gap: 60px;
+    list-style: none;
+}
+
+.menuitem a{
+    font-size: 25px;
+    color: var(--color-text);
+    text-decoration: none;
+}
+.menubtn{
+    display: none;
+
+}
+
+@media screen and (max-width:830px) {
+    .navbar{
+        
+        display: flex;
+        flex-direction:column ;
+        align-items: flex-start;
+
+
+    }
+    .menu{
+        position: absolute;
+        right: 0;
+        
+        margin-right: -10%;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+        z-index: 3;
+    }
+
+    .menubtn{ 
+        display: block;
+        cursor: pointer;
+    }
+
+    .menuitem{
+        margin-top: 30px;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap:13px ;
+        border-radius: 10px ;
+        background:rgb(25, 55, 109);
+        background: linear-gradient(
+          0deg,
+         rgba(25,  55, 109,0.4) 0%,
+         rgba(25,55,109,1)100%);
+         padding: 24px 33px;
+         box-shadow: 0 0px 0 rgba(0,0,0.25);
+
+
+    }
+
+    .menuopen{
+        display: flex;
+        z-index: 1;
+    }
+    
+}
+

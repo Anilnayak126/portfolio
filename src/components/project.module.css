@@ -1,0 +1,31 @@
+@import '../vars.css';
+
+.container{
+    margin-top: 76px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.title {
+    width: 150px;
+    font-size:25px;
+    font-weight:700;
+    letter-spacing:1.75px;
+    text-transform:uppercase;
+    background: linear-gradient(180deg, #19376d 0%, rgba(25, 55, 109, 0)100%);
+
+
+}
+
+.projects{
+    margin-top: 37px;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content: center;
+    gap:15px;
+    width:100%;
+
+
+}

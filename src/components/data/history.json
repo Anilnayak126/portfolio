@@ -1,0 +1,25 @@
+[
+    {
+      "role": "B.tech",
+    
+      "organisation": "Synergy institute of technology Bbsr",
+      "startDate": "2021",
+      "endDate": "2024",
+      "imageSrc": "histor/synergyImg.png"
+    },
+    {
+      "role": "Diploma",
+      "organisation": "Synergy Polytechnic Bhubaneswar",
+      
+      "startDate": "2018",
+      "endDate": "2021",
+      "imageSrc": "histor/synergyImg.png"
+    },
+    {
+      "role": "Matriculation",
+      "organisation": "Board Of Secondary Education, Odisha",
+      "startDate": "2017",
+      "endDate": "2018",
+      "imageSrc": "histor/BseOdisha.png"
+    }
+  ]
