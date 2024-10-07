@@ -1,8 +1,15 @@
 [
-    {
-      "role": "B.tech",
+  {
+    "role": "Python Full stack Intern,",
+    "organisation": "Scholar Logic , Btm Layout Banglore,",
+    "startDate": "April-2024",
+    "endDate": "present",
+    "imageSrc": "histor/citytech-logo.png"
+  },  
+  {
+      "role": "B.tech,",
     
-      "organisation": "Synergy institute of technology Bbsr",
+      "organisation": "Synergy institute of technology Bbsr,",
       "startDate": "2021",
       "endDate": "2024",
       "imageSrc": "histor/synergyImg.png"
@@ -22,4 +29,6 @@
       "endDate": "2018",
       "imageSrc": "histor/BseOdisha.png"
     }
+    
+    
   ]

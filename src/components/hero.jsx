@@ -20,8 +20,11 @@ const Hero = ()=>{
                 <a href="mailto:nayakanil43603@gmail.com" className={styles.contactbtn}>Contact Me</a>
 
             </div>
+            <div className={styles.logo_container}>
+            <img src={getImageUrl('hero/img.png')} alt="My img" className={styles.round_logo} />
+        
+            </div>
 
-            <img src={getImageUrl('hero/heroImage.png')} alt="My img" className={styles.heroimg} />
             <div className={styles.topBlur}/>
             <div className={styles.bottomBlur}/>
         </section>

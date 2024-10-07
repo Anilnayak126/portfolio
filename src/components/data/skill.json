@@ -12,8 +12,8 @@
       "imageSrc": "skills/react.png"
     },
     {
-      "title": "Node",
-      "imageSrc": "skills/node.png"
+      "title": "Api",
+      "imageSrc": "skills/api.png"
     },
     
     {
@@ -21,7 +21,31 @@
       "imageSrc": "skills/mongodb.png"
     },
     {
+      "title": "MySql",
+      "imageSrc": "skills/mysql.png"
+    },
+    {
       "title": "Figma",
       "imageSrc": "skills/figma.png"
+    },
+    
+    {
+      "title": "Python",
+      "imageSrc": "skills/python.png"
+    },
+    
+    {
+      "title": "Javascript",
+      "imageSrc": "skills/javascript.png"
+    },
+    
+    {
+      "title": "Django",
+      "imageSrc": "skills/django.png"
+    },
+    {
+      "title": "Tailwind",
+      "imageSrc": "skills/tailwind.png"
     }
+    
   ]
