@@ -65,3 +65,16 @@
     padding:1px 22px ;
     box-shadow:0 0 10px #04152d inset, 0 0 5px #04152d;
 }
+
+.showMore {
+    background-color: transparent;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    margin-top: 8px;
+    font-size: 0.9rem;
+  }
+  
+  .showMore:hover {
+    text-decoration: underline;
+  }

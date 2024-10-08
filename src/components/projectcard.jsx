@@ -1,30 +1,51 @@
+import React, { useState } from "react";
+import styles from "./projectcard.module.css";
+import { getImageUrl } from "../utility";
+import ReadMore from "./Readmore";
 
-import React,{useState} from "react";
-import styles from './projectcard.module.css';
-import { getImageUrl } from '../utility';
+const Projectcard = ({
+  project: { title, imageSrc, description, skills, demo, source },
+}) => {
+    const [showMore, setShowMore] = useState(false);
 
-
- const  Projectcard = ({
-    project: { title, imageSrc, description, skills, demo, source },}) =>{
-        
-    return(
-        <div className={styles.container}>
-            <img src= {getImageUrl(imageSrc)} className={styles.image} alt={`image of ${title}`} />
-                        <h3 className={styles.title}>{title}</h3>
-                        <p className={styles.description}>{description}</p>
-                        <ul className={styles.skills}>
-                            {skills.map((skill,id)=>{
-                                return <li className={styles.skill} key={id} >{skill}</li>
-                            })}
-                        </ul>
-                         <div className={styles.links}>
-                            <a href={demo} className={styles.link}>Demo</a>
-                            <a href={source} className={styles.link}> Source</a>
-                         </div>
- 
-                    </div>
-
-    )
-}
+    const handleToggle = () => {
+      setShowMore((prev) => !prev);
+    };
+  
+  return (
+    <div className={styles.container}>
+      <img
+        src={getImageUrl(imageSrc)}
+        className={styles.image}
+        alt={`image of ${title}`}
+      />
+      <h3 className={styles.title}>{title}</h3>
+      <p className={styles.description}>
+        <ReadMore text={description} maxLength={100} />
+      </p>
+      <ul className={styles.skills}>
+        {skills.slice(0, showMore ? skills.length : 2).map((skill, id) => (
+          <li className={styles.skill} key={id}>
+            {skill}
+          </li>
+        ))}
+      </ul>
+      {skills.length > 2 && (
+        <button className={styles.showMore} onClick={handleToggle}>
+          {showMore ? "Show Less" : "Show More"}
+        </button>
+      )}
+      <div className={styles.links}>
+        <a href={demo} className={styles.link}>
+          Demo
+        </a>
+        <a href={source} className={styles.link}>
+          {" "}
+          Source
+        </a>
+      </div>
+    </div>
+  );
+};
 
 export default Projectcard;
