@@ -27,11 +27,12 @@
     font-size: 72px;
     font-weight: 900;
     margin-bottom: 33px;
-    font-family: var(--font-robot);
-    background: linear-gradient(180deg, hsla(0, 7%, 61%, 0.741) 70%, hsla(0, 98%, 46%, 0.885)120%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
+    background: linear-gradient(90deg, #FF0080, #FF8C00);
+    -webkit-background-clip: text; /* For Safari */
+    background-clip: text; /* Standard property */
+    -webkit-text-fill-color: transparent; /* For Safari */
+    text-fill-color: transparent; /* Standard property (not widely supported yet) */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .description {
