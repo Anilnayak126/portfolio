@@ -8,12 +8,12 @@ const ReadMore = ({ text, maxLength }) => {
   };
 
   return (
-    <div>
-      <p>
+    <div  >
+      <p >
         {isReadMore ? `${text.slice(0, maxLength)}...` : text}
-        <span
+        <span 
           onClick={toggleReadMore}
-          style={{ color: "blue", cursor: "pointer" }}
+          style={{ color: "black", cursor: "pointer" }}
         >
           {isReadMore ? " Read More" : " Show Less"}
         </span>

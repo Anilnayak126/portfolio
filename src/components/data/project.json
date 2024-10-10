@@ -1,92 +1,98 @@
 [
-    {
-      "title": "CRM",
-      "imageSrc": "projec/default.png",
-      "description": "This CRM application allows users to efficiently manage customer data, track interactions, and organize sales processes.",
-      "skills": ["Django", "Mysql","Bootstrap"],
-      "demo": "#",
-      "source": "https://github.com/Anilnayak126/Django-CRM.git"
-    },
-
-    {
-      "title": "CLound Maanagement Website",
-      "imageSrc": "projec/Cloud.png",
-      "description": "This cloud management website is designed to provide users with an intuitive platform for managing their cloud services effectively. Developed using React, the site offers a seamless and responsive user experience, allowing users to monitor, manage, and optimize their cloud resources efficiently.",
-      "skills": ["React", "Tailwind css"],
-      "demo": "https://cloud-storage-web-app.vercel.app/ ",
-      "source": "https://github.com/Anilnayak126/Cloud-Storage-WebApp.git"
-    },
-    {
-      "title": "Youtube Clone",
-      "imageSrc": "projec/Youtube.png",
-      "description": "This YouTube clone application replicates key features of the popular video-sharing platform, providing users with a clean, responsive interface to browse, search, and watch videos.",
-      "skills": ["React", "Tailwind css", "Rapid Api"],
-      "demo": "#",
-      "source": "https://github.com/Anilnayak126/YoutubeClone.git"
-    },
-    {
-      "title": "CRUD APP",
-      "imageSrc": "projec/default.png",
-      "description": " Built using React for the front end and Django Rest Framework (DRF) for the back end, the app delivers a seamless experience in managing data with real-time interactions between the client and the server.",
-      "skills": [ "Django","RestAPI","React", "Tailwind css"],
-      "demo": "#",
-      "source": "https://github.com/Anilnayak126/CRUD.git"
-    },
-    {
-      "title": "WebScraping ",
-      "imageSrc": "projec/default.png",
-      "description": "This web scraping application is designed to automate the extraction and management of data from various websites. Utilizing Python along with Beautiful Soup, Pandas, and Selenium, the app enables users to log in, register, and manage their tasks effectively. The combination of these technologies provides a robust platform for scraping and organizing data efficiently..",
-      "skills": [ "Python","Selenium", "Beautiful Soup (bs4)", "Pandas"],
-      "demo": "#",
-      "source": "https://github.com/Anilnayak126/Python-selenium.git"
-    },
-    {
-      "title": "TODO APP",
-      "imageSrc": "projec/default.png",
-      "description": "This To-Do app is a web application designed to help users manage their tasks efficiently. Developed using Django for the backend and HTML, CSS, and JavaScript for the frontend, the app provides a simple yet powerful interface for task management. Users can register, log in, and seamlessly manage their to-do lists.",
-      "skills": ["Django","SqlLite","HTML","CSS","Javascript"],
-      "demo": "#",
-      "source": "https://github.com/Anilnayak126/TO-DO-App.git"
-    },
-    {
-      "title": "TOUR Website",
-      "imageSrc": "projec/Tour.png",
-      "description": " Built using React for a seamless user experience, the website showcases stunning visuals and user-friendly navigation",
-      "skills": ["React", "Tailwind css"],
-      "demo": "https://tour-app-three.vercel.app/",
-      "source": "https://github.com/Anilnayak126/TourApp.git"
-    },
-    {
-      "title": "Travel Website",
-      "imageSrc": "projec/Travel.png",
-      "description": "This travel website is an interactive platform designed to inspire users to explore and book their next adventure",
-      "skills": ["React", "Tailwind css"],
-      "demo": "https://travel-app-two-sandy.vercel.app/",
-      "source": "https://github.com/Anilnayak126/TravelApp.git"
-    },
-    {
-      "title": "Food Delivery Website",
-      "imageSrc": "projec/Food.png",
-      "description": " This food website is a vibrant and interactive platform designed for food enthusiasts to explore, discover, and share recipes. Built with React, the site delivers a smooth user experience",
-      "skills": ["React", "Tailwind css"],
-      "demo": "https://food-website-two-kappa.vercel.app/ ",
-      "source": "https://github.com/Anilnayak126/Food-Website.git"
-    },
-    
-    {
-      "title": "Tool Provider Website",
-      "imageSrc": "projec/Tool.png",
-      "description": "This tool provider website serves as an online platform for users to discover, compare, and procure a wide range of tools for devlopers. Built with React, the site offers a responsive and user-friendly interface that enhances the shopping experience",
-      "skills": ["React", "Tailwind css"],
-      "demo": "https://anils-modern-web-page.vercel.app/",
-      "source": "https://github.com/Anilnayak126/ModernWebPage.git"
-    },
-    {
-      "title": "LMS WEBAPP",
-      "imageSrc": "projec/LMS.png",
-      "description": " Built with React for a dynamic front-end experience and styled with Tailwind CSS for a modern.",
-      "skills": ["React", "Tailwind css"],
-      "demo": "https://lms-nine-umber.vercel.app/",
-      "source": "https://github.com/Anilnayak126/Webpage.git"
-    }
-  ]
+  {
+    "title": "CRM",
+    "imageSrc": "projec/default.png",
+    "description": "This CRM application allows users to efficiently manage customer data, track interactions, and organize sales processes.",
+    "skills": ["Django", "MySQL", "Bootstrap"],
+    "demo": "#",
+    "source": "https://github.com/Anilnayak126/Django-CRM.git"
+  },
+  {
+    "title": "Cloud Management Website",
+    "imageSrc": "projec/Cloud.png",
+    "description": "This cloud management website provides an intuitive platform for managing cloud services effectively. Developed using React, it offers a seamless and responsive user experience, allowing users to monitor, manage, and optimize their cloud resources efficiently.",
+    "skills": ["React", "Tailwind CSS"],
+    "demo": "https://cloud-storage-web-app.vercel.app/",
+    "source": "https://github.com/Anilnayak126/Cloud-Storage-WebApp.git"
+  },
+  {
+    "title": "YouTube Clone",
+    "imageSrc": "projec/Youtube.png",
+    "description": "This YouTube clone replicates key features of the popular video-sharing platform, providing a clean, responsive interface for browsing, searching, and watching videos.",
+    "skills": ["React", "Tailwind CSS", "Rapid API"],
+    "demo": "#",
+    "source": "https://github.com/Anilnayak126/YoutubeClone.git"
+  },
+  {
+    "title": "CRUD App",
+    "imageSrc": "projec/default.png",
+    "description": "Built using React for the frontend and Django REST Framework (DRF) for the backend, this app provides a seamless experience in managing data with real-time interactions between the client and the server.",
+    "skills": ["Django", "REST API", "React", "Tailwind CSS"],
+    "demo": "#",
+    "source": "https://github.com/Anilnayak126/CRUD.git"
+  },
+  {
+    "title": "Web Scraping",
+    "imageSrc": "projec/default.png",
+    "description": "This web scraping application automates the extraction and management of data from various websites. Developed using Python with Beautiful Soup, Pandas, and Selenium, the app allows users to log in, register, and manage their tasks efficiently.",
+    "skills": ["Python", "Selenium", "Beautiful Soup (bs4)", "Pandas"],
+    "demo": "#",
+    "source": "https://github.com/Anilnayak126/Python-selenium.git"
+  },
+  {
+    "title": "To-Do App",
+    "imageSrc": "projec/default.png",
+    "description": "This To-Do app helps users manage their tasks efficiently. Built using Django for the backend and HTML, CSS, and JavaScript for the frontend, the app provides a simple yet powerful interface for task management.",
+    "skills": ["Django", "SQLite", "HTML", "CSS", "JavaScript"],
+    "demo": "#",
+    "source": "https://github.com/Anilnayak126/TO-DO-App.git"
+  },
+  {
+    "title": "Tour Website",
+    "imageSrc": "projec/Tour.png",
+    "description": "Built using React for a seamless user experience, the website showcases stunning visuals and user-friendly navigation for users to explore various tour packages.",
+    "skills": ["React", "Tailwind CSS"],
+    "demo": "https://tour-app-three.vercel.app/",
+    "source": "https://github.com/Anilnayak126/TourApp.git"
+  },
+  {
+    "title": "Travel Website",
+    "imageSrc": "projec/Travel.png",
+    "description": "This travel website is an interactive platform designed to inspire users to explore and book their next adventure.",
+    "skills": ["React", "Tailwind CSS"],
+    "demo": "https://travel-app-two-sandy.vercel.app/",
+    "source": "https://github.com/Anilnayak126/TravelApp.git"
+  },
+  {
+    "title": "Food Delivery Website",
+    "imageSrc": "projec/Food.png",
+    "description": "This food website is a vibrant platform designed for food enthusiasts to explore and discover recipes. Built with React, it delivers a smooth and interactive user experience.",
+    "skills": ["React", "Tailwind CSS"],
+    "demo": "https://food-website-two-kappa.vercel.app/",
+    "source": "https://github.com/Anilnayak126/Food-Website.git"
+  },
+  {
+    "title": "Tool Provider Website",
+    "imageSrc": "projec/Tool.png",
+    "description": "This tool provider website serves as an online platform for users to discover, compare, and purchase a wide range of developer tools. Built with React, it offers a responsive and user-friendly interface.",
+    "skills": ["React", "Tailwind CSS"],
+    "demo": "https://anils-modern-web-page.vercel.app/",
+    "source": "https://github.com/Anilnayak126/ModernWebPage.git"
+  },
+  {
+    "title": "LMS WebApp",
+    "imageSrc": "projec/LMS.png",
+    "description": "This Learning Management System (LMS) web app is built with React for a dynamic front-end experience and styled with Tailwind CSS for a modern look.",
+    "skills": ["React", "Tailwind CSS"],
+    "demo": "https://lms-nine-umber.vercel.app/",
+    "source": "https://github.com/Anilnayak126/Webpage.git"
+  },
+  {
+    "title": "Vintage Books Market (Upcoming)",
+    "imageSrc": "projec/upcoming.webp",
+    "description": "An upcoming full-stack web application for buying and selling used and vintage books. Developed with React, Redux for state management, and Django REST Framework (DRF) for the backend. The platform will feature user authentication, book listings, search functionality, and secure transactions. Contributor : Ankita Modi has played a key role in frontend development.",
+    "skills": ["Django", "DRF", "Redux", "React", "Tailwind CSS"],
+    "demo": "#",
+    "source": "https://github.com/Anilnayak126/vintage-books-market.git"
+  }
+]
