@@ -15,8 +15,11 @@
 
 .image{
     margin-bottom: 26px;
+    border-radius: 2%;
 
+   
 }
+
 .title{
     font-size:20px;
     font-weight:700;

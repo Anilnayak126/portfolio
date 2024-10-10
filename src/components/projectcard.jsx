@@ -6,12 +6,12 @@ import ReadMore from "./Readmore";
 const Projectcard = ({
   project: { title, imageSrc, description, skills, demo, source },
 }) => {
-    const [showMore, setShowMore] = useState(false);
+  const [showMore, setShowMore] = useState(false);
 
-    const handleToggle = () => {
-      setShowMore((prev) => !prev);
-    };
-  
+  const handleToggle = () => {
+    setShowMore((prev) => !prev);
+  };
+
   return (
     <div className={styles.container}>
       <img
@@ -20,9 +20,9 @@ const Projectcard = ({
         alt={`image of ${title}`}
       />
       <h3 className={styles.title}>{title}</h3>
-      <p className={styles.description}>
+      <div className={styles.description}>
         <ReadMore text={description} maxLength={100} />
-      </p>
+      </div>
       <ul className={styles.skills}>
         {skills.slice(0, showMore ? skills.length : 2).map((skill, id) => (
           <li className={styles.skill} key={id}>
