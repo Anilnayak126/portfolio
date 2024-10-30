@@ -4,8 +4,6 @@
     margin-top: 79px;
     margin-left: 10%;
     margin-right: 10%;
-
-
 }
 
 .title {
@@ -14,9 +12,8 @@
     font-weight: 700;
     letter-spacing: 1.75px;
     text-transform: uppercase;
-    background: linear-gradient(180deg, #19376d 0%, rgba(25, 55, 109, 0)100%);
-
-
+    background: linear-gradient(180deg, #19376d 0%, rgba(25, 55, 109, 0) 100%);
+    animation: fadeIn 1s ease-in;
 }
 
 .content {
@@ -24,6 +21,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     margin-top: 14px;
+    animation: slideIn 0.5s ease-in-out;
 }
 
 .skills {
@@ -31,7 +29,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 37px;
-
 }
 
 .skill {
@@ -39,39 +36,45 @@
     flex-direction: column;
     align-items: center;
     gap: 11px;
+    transition: transform 0.3s ease;
+}
+
+.skill:hover {
+    transform: scale(1.05); /* Slightly increase size on hover */
 }
 
 .imagecontainer {
     background-color: var(--color-secondary);
-    border-radius: 100%;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 120px;
     height: 120px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
-.imagecontainer>img {
+.imagecontainer:hover {
+    transform: rotate(15deg); /* Slightly rotate on hover */
+}
+
+.imagecontainer > img {
     width: 75px;
 }
-
-
 
 .skill p {
     font-size: 25px;
     font-family: var(--font-roboto);
     font-weight: 500;
+    text-align: center; /* Center text for better alignment */
 }
-
-
 
 .history {
     width: 45%;
     display: flex;
     flex-direction: column;
     gap: 40px;
-
-
 }
 
 .historyitem {
@@ -80,26 +83,29 @@
     align-items: center;
     gap: 17px;
     background: #19376d;
-    background: linear-gradient(90deg, #19376d 0%, rgba(25, 55, 109, 0)100%);
+    background: linear-gradient(90deg, #19376d 0%, rgba(25, 55, 109, 0) 100%);
     border-radius: 10px;
     padding: 24px;
-
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.historyitem>img {
+.historyitem:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow on hover */
+}
+
+.historyitem > img {
     width: 100px;
 }
 
 .historyitemdetails {
     font-family: var(--font-roboto);
-
 }
 
 .historyitemdetails h3 {
     font-size: 25px;
     font-weight: 500;
 }
-
 
 .historyitemdetails ul {
     margin-top: 6px;
@@ -109,29 +115,23 @@
     margin-left: 17px;
 }
 
-.eduactiontitle{
+.eduactiontitle {
     margin-top: -40px;
     height: 35px;
-    background: linear-gradient(180deg, #19376d 0%, rgba(25, 55, 109, 0)100%);
-
-   
+    background: linear-gradient(180deg, #19376d 0%, rgba(25, 55, 109, 0) 100%);
 }
-
 
 @media screen and (max-width: 830px) {
     .content {
         flex-direction: column;
         align-items: center;
         gap: 34px;
-
     }
 
     .skills {
         width: 100%;
         flex-direction: row;
         justify-content: center;
-
-
     }
 
     .history {
@@ -139,9 +139,28 @@
         gap: 9px;
     }
 
-    .eduactiontitle{
+    .eduactiontitle {
         margin-top: 30px;
-   
     }
-    
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

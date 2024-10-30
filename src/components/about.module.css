@@ -1,94 +1,91 @@
-
 @import '../vars.css';
 
-.container{
+.container {
     position: relative;
     background-color: rgba(12, 12, 12, 0.6);
     border-radius: 30px;
-    margin-top: 129px ;
+    margin-top: 8rem; /* Changed to rem */
     z-index: 1;
     margin-left: 10%;
     margin-right: 10%;
+    padding: 2rem; /* Added padding for better spacing */
 }
 
-.title{
-    color:var(--color-text);
-    padding: 30px;
-    font-size: 25px;
+.title {
+    color: var(--color-text);
+    padding: 1.875rem; /* Changed to rem */
+    font-size: 2.5rem; /* Changed to rem */
     font-weight: 700;
     letter-spacing: 1.75px;
     text-transform: uppercase;
-    
+    text-align: center; /* Centered title */
 }
-.content{
+
+.content {
     display: flex;
     flex-direction: row;
     align-items: center;
-
-
+    justify-content: space-around; /* Added spacing between items */
 }
-.aboutimage{
+
+.aboutimage {
     width: 35%;
 }
-.aboutitems{
+
+.aboutitems {
     display: flex;
     flex-direction: column;
-    gap: 50px;
-
-   
+    gap: 3rem; /* Changed to rem for spacing */
 }
 
-.aboutitem{
+.aboutitem {
     display: flex;
     flex-direction: row;
     align-items: center;
     border-radius: 20px;
     list-style: none;
-    padding: 25px;
-    background-image: linear-gradient(90deg,
-                 rgba(165,215,232,0.42)0%,
-                 rgba(255,255,255,0)100%);
-
+    padding: 1.5625rem; /* Changed to rem */
+    background-image: linear-gradient(90deg, rgba(165, 215, 232, 0.42) 0%, rgba(255, 255, 255, 0) 100%);
     background-size: 0 100%;
     background-repeat: no-repeat;
-    transition: 0.4s;
-                
-
+    transition: background-size 0.4s ease, transform 0.4s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
 }
-.aboutitem:hover{
+
+.aboutitem:hover {
     background-size: 100% 100%;
-   
-
-
+    transform: translateY(-5px); /* Slightly lift the item on hover */
 }
-.aboutitem h3{
-    font-size: 25px;
+
+.aboutitem h3 {
+    font-size: 1.875rem; /* Changed to rem */
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem; /* Changed to rem */
 }
 
-.aboutitem p{
-    font-size: 25px;
+.aboutitem p {
+    font-size: 1.25rem; /* Changed to rem */
+    margin: 0; /* Remove default margin */
 }
 
-@media screen and (max-width: 830px) {
-    .container{
+/* Media Query for Responsiveness */
+@media screen and (max-width: 52rem) { /* Adjusted to rem */
+    .container {
         background-color: transparent;
         padding-left: 0;
-        padding-right: 0
-        ;
+        padding-right: 0;
     }
-    .content{
-        flex-direction: column;
 
+    .content {
+        flex-direction: column;
     }
-    .aboutimage{
+
+    .aboutimage {
         display: none;
     }
-    
-    .aboutitem{
+
+    .aboutitem {
         padding-left: 0;
         padding-right: 0;
     }
 }
-

@@ -1,72 +1,90 @@
 @import '../vars.css';
 
-.container{
-    display:flex;
-    flex-direction:column;
-    border-radius:10px; 
-    border-radius:10px;
-    background:linear-gradient(180deg, #576cbc 0%, #132a53 100%);
-    box-shadow:0 16px 14px 0 #04152d;
-    padding:18px 24px;
-    max-width:345px;
-
-
+.container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #576cbc 0%, #132a53 100%);
+    box-shadow: 0 16px 14px 0 #04152d;
+    padding: 18px 24px;
+    max-width: 345px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation on hover */
 }
 
-.image{
+.container:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 20px 20px 0 #04152d; /* Deeper shadow on hover */
+}
+
+.image {
     margin-bottom: 26px;
     border-radius: 2%;
-
-   
+    transition: transform 0.3s ease; /* Image zoom effect */
 }
 
-.title{
-    font-size:20px;
-    font-weight:700;
-    
-
+.image:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
 }
 
-.description{
+.title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-text); /* Ensure text contrast */
+}
+
+.description {
     margin-top: 6px;
-    font-size:20px;
-    font-weight:400;
-
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--color-light); /* Different color for description */
 }
-.skills{
+
+.skills {
     width: 100%;
     margin-top: 14px;
     display: flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    gap:6px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
     list-style: none;
 }
-.skill{
-    font-size: 20px;
-    border-radius:100px;
-    font-weight:400;
-    background:var(--color-dark);
-    padding:2px 22px;
-    box-shadow:0 0 10px #04152d inset, 0 0 5px #04152d;
+
+.skill {
+    font-size: 16px; /* Slightly smaller font size */
+    border-radius: 100px;
+    font-weight: 400;
+    background: var(--color-dark);
+    padding: 5px 15px; /* Adjusted padding for better fit */
+    box-shadow: 0 0 10px #04152d inset, 0 0 5px #04152d;
+    transition: background 0.3s ease; /* Animation for hover effect */
 }
 
-.links{
-    width:100%;
+.skill:hover {
+    background: var(--color-primary); /* Change background on hover */
+}
+
+.links {
+    width: 100%;
     margin-top: 25px;
-    display:flex;
-    justify-content:space-around;
-
+    display: flex;
+    justify-content: space-around;
 }
-.link{
-    text-decoration:none;
-    color:var(--color-text);
-    font-size:20px;
-    font-weight:600;
-    border-radius:100px;
-    background:var(--color-primary);
-    padding:1px 22px ;
-    box-shadow:0 0 10px #04152d inset, 0 0 5px #04152d;
+
+.link {
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 100px;
+    background: var(--color-primary);
+    padding: 5px 20px; /* Adjusted padding */
+    box-shadow: 0 0 10px #04152d inset, 0 0 5px #04152d;
+    transition: background 0.3s ease, transform 0.3s ease; /* Animation */
+}
+
+.link:hover {
+    background: var(--color-secondary); /* Change color on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
 }
 
 .showMore {
@@ -76,8 +94,8 @@
     cursor: pointer;
     margin-top: 8px;
     font-size: 0.9rem;
-  }
-  
-  .showMore:hover {
+}
+
+.showMore:hover {
     text-decoration: underline;
-  }
+}

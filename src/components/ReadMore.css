@@ -1,0 +1,18 @@
+.read-more-text {
+    transition: opacity 0.5s ease;
+    opacity: 1;
+}
+
+.fade-out {
+    opacity: 0; /* Fade out effect */
+}
+
+.fade-in {
+    opacity: 1; /* Fade in effect */
+}
+
+.read-more-scrollable {
+    /* Add any necessary styles for scrollable text if needed */
+    max-height: 300px; /* or whatever height suits your design */
+    overflow-y: auto; /* Allow vertical scrolling */
+}

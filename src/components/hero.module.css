@@ -1,18 +1,15 @@
 @import '../vars.css';
 
-
 .container {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 10rem; /* Changed to rem */
     z-index: 1;
     margin-left: 10%;
     margin-right: 10%;
-
 }
-
 
 .content {
     font-family: var(--font-outfit);
@@ -20,50 +17,91 @@
     flex-direction: column;
     align-items: flex-start;
     z-index: 1;
-
+    margin-top: 3rem; /* Changed to rem */
 }
 
 .title {
-    font-size: 72px;
+    font-size: 4.5rem; /* Changed to rem */
     font-weight: 900;
-    margin-bottom: 33px;
+    margin-bottom: 2rem; /* Changed to rem */
     background: linear-gradient(90deg, #FF0080, #FF8C00);
     -webkit-background-clip: text; /* For Safari */
     background-clip: text; /* Standard property */
     -webkit-text-fill-color: transparent; /* For Safari */
     text-fill-color: transparent; /* Standard property (not widely supported yet) */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-top: 1rem; /* Added margin top for spacing */
 }
 
 .description {
-    font-size: 20px;
-    padding: 10px;
+    font-size: 1.25rem; /* Changed to rem */
+    padding: 0.625rem; /* Changed to rem */
     font-family: var(--font-robot);
-    letter-spacing: 1px;
-    /* font-family: var(--font-outfit); */
+    letter-spacing: 0.05rem; /* Changed to rem */
+}
+
+/* Keyframes for animations */
+@keyframes buttonBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Bounce effect */
+    }
+}
+
+@keyframes buttonShake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes buttonGlow {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Glow effect */
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0);
+    }
 }
 
 .contactbtn {
     text-decoration: none;
     background-color: var(--color-primary);
     color: var(--text-color);
-    
     border-radius: 100px;
-    margin-top: 15px;
-    padding: 10px;
+    margin-top: 1rem; /* Changed to rem */
+    padding: 0.625rem 1rem; /* Changed to rem */
     box-shadow: 0 0 4px 0 rgba(58, 12, 225, 0.25);
-
-
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition */
+    animation: buttonBounce 1s infinite; /* Add bounce animation */
 }
-.contactbtn:hover{
+
+.contactbtn:hover {
+    background-color: rgba(58, 12, 225, 0.7); /* Change background on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+    animation: buttonShake 0.5s; /* Add shake animation */
+    animation-fill-mode: forwards; /* Retain the end state of the shake */
     box-shadow: 0 0 12px 7px rgba(39, 46, 116, 0.25);
-
+    animation: buttonGlow 1s infinite; /* Add glow effect */
 }
+
+.contactbtn:active {
+    transform: scale(0.95); /* Scale down when active */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5); /* Darken shadow on click */
+}
+
+
 
 .heroimg {
-    width: 50%;
+    width: 50%; /* Make image responsive */
+    max-width: 300px; /* Set a maximum width for larger screens */
     z-index: 1;
-
     animation-name: floating;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -74,41 +112,38 @@
     0% {
         transform: translate(0, 0px);
     }
-
     50% {
         transform: translate(0, 10px);
-
     }
-
     100% {
-        transform: translate(0,-0px);
+        transform: translate(0, 0px);
     }
-
 }
 
-.topBlur{
+.topBlur {
     position: absolute;
     width: 50vw;
     height: 50vh;
-    min-width: 350px;
-    min-height: 350px;
-    top: -128px;
+    min-width: 22rem; /* Changed to rem */
+    min-height: 22rem; /* Changed to rem */
+    top: -8rem; /* Changed to rem */
     left: 10vw;
     border: 764px;
-    background:rgba(25, 55,109, 0.7) ;
+    background: rgba(25, 55, 109, 0.7);
     filter: blur(100px);
     z-index: 0;
 }
-.bottomBlur{
+
+.bottomBlur {
     position: absolute;
     width: 70vw;
     height: 50vh;
-    min-width: 350px;
-    min-height: 250px;
-    top: 248px;
+    min-width: 22rem; /* Changed to rem */
+    min-height: 15rem; /* Changed to rem */
+    top: 15rem; /* Changed to rem */
     right: -24vw;
     border: 764px;
-    background:rgba(25, 55,109, 0.7) ;
+    background: rgba(25, 55, 109, 0.7);
     filter: blur(100px);
     z-index: 0;
 }
@@ -118,41 +153,56 @@
     justify-content: center;
     align-items: center;
     background-color: #081753;
-    padding: 30px; 
-    border-radius: 50%; 
+    padding: 1.875rem; /* Changed to rem */
+    border-radius: 50%;
     z-index: 1;
+    margin-top: 1.5rem; /* Added margin top for spacing */
 }
 
 .round_logo {
-    
-    width: 300px; 
-    height:  300px;
-    border-radius: 50%; 
-    object-fit: cover; 
+    width: 18.75rem; /* Changed to rem */
+    height: 18.75rem; /* Changed to rem */
+    border-radius: 50%;
+    object-fit: cover;
     animation-name: floating;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
-@media screen and (max-width: 830px){
-    .container{
+
+/* Media Query for Responsiveness */
+@media screen and (max-width: 52rem) { /* Changed to rem */
+    .container {
         flex-direction: column-reverse;
+        margin-top: 5rem;
     }
 
-    .content{
+    .content {
         align-items: center;
-        
     }
-    .title{
-        text-align: center;
-    }
-    .description{
-        text-align: center;
-        font-size: 20px;
-    }
-   
 
+    .title {
+        text-align: center;
+    }
+
+    .description {
+        text-align: center;
+        font-size: 1.25rem; /* Changed to rem */
+    }
+
+    /* Add margin top to the logo when not in full width */
+    .logo_container {
+        margin-top: 2rem; /* Adjust as needed */
+    }
+
+    /* Ensure image is responsive */
+    .heroimg {
+        width: 70%; /* Adjust width for smaller screens */
+        max-width: 200px; /* Adjust max-width */
+    }
+
+    .round_logo {
+        width: 15rem; /* Adjust logo size */
+        height: 15rem; /* Adjust logo size */
+    }
 }
-
-
-

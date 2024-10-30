@@ -1,32 +1,31 @@
+import React from "react";
+import Typing from "react-typing-animation";
 import { getImageUrl } from "../utility";
 import styles from './hero.module.css';
 
-
-
-const Hero = ()=>{
-
+const Hero = () => {
     return (
         <section className={styles.container}>
             <div className={styles.content}>
-                <h1 className={styles.title}>Hii i'm Anil</h1>
+                <h1 className={styles.title}>
+                    Hii, I'm
+                    Anil 
+                </h1>
                 <p className={styles.description}>
-                Aspiring Python full-stack developer with a strong foundation
-                in developing end-to-end web applications. Passionate about creating 
-                robust backend services using Python, Django. Quick learner, adaptable,
-                and eager to contribute
-                to dynamic development teams.
+                    Aspiring Python full-stack developer with a strong foundation
+                    in developing end-to-end web applications. Passionate about creating 
+                    robust backend services using Python and Django. Quick learner, adaptable,
+                    and eager to contribute to dynamic development teams.
                 </p>
 
                 <a href="mailto:nayakanil43603@gmail.com" className={styles.contactbtn}>Contact Me</a>
-
             </div>
             <div className={styles.logo_container}>
-            <img src={getImageUrl('hero/img.png')} alt="My img" className={styles.round_logo} />
-        
+                <img src={getImageUrl('hero/img.png')} alt="My img" className={styles.round_logo} />
             </div>
 
-            <div className={styles.topBlur}/>
-            <div className={styles.bottomBlur}/>
+            <div className={styles.topBlur} />
+            <div className={styles.bottomBlur} />
         </section>
     );
 }

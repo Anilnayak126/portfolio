@@ -17,11 +17,12 @@ const Projectcard = ({
       <img
         src={getImageUrl(imageSrc)}
         className={styles.image}
-        alt={`image of ${title}`}
+        alt={`Image of ${title}`}
       />
       <h3 className={styles.title}>{title}</h3>
       <div className={styles.description}>
-        <ReadMore  text={description} maxLength={100} />
+        {/* Debugging line */}
+        <ReadMore text={description} maxLength={100} />
       </div>
       <ul className={styles.skills}>
         {skills.slice(0, showMore ? skills.length : 2).map((skill, id) => (
@@ -36,11 +37,10 @@ const Projectcard = ({
         </button>
       )}
       <div className={styles.links}>
-        <a href={demo} className={styles.link}>
+        <a href={demo} className={styles.link} target="_blank" rel="noopener noreferrer">
           Demo
         </a>
-        <a href={source} className={styles.link}>
-          {" "}
+        <a href={source} className={styles.link} target="_blank" rel="noopener noreferrer">
           Source
         </a>
       </div>

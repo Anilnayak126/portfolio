@@ -1,31 +1,40 @@
 @import '../vars.css';
 
-.container{
-    margin-top: 76px;
+.container {
+    margin-top: 79px;
     margin-left: 10%;
     margin-right: 10%;
 }
 
 .title {
-    width: 150px;
-    font-size:25px;
-    font-weight:700;
-    letter-spacing:1.75px;
-    text-transform:uppercase;
-    background: linear-gradient(180deg, #19376d 0%, rgba(25, 55, 109, 0)100%);
-
-
+    width: 100px;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1.75px;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, #19376d 0%, rgba(25, 55, 109, 0) 100%);
+    margin-bottom: 20px; /* Space below the title */
 }
 
-.projects{
-    margin-top: 37px;
-    display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    align-items:center;
-    justify-content: center;
-    gap:15px;
-    width:100%;
+.projects {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    justify-content: space-around; /* Space evenly */
+    gap: 20px; /* Gap between cards */
+}
 
+@media screen and (max-width: 830px) {
+    .container {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    .title {
+        font-size: 20px; /* Smaller title on smaller screens */
+    }
 
+    .projects {
+        flex-direction: column; /* Stack projects vertically */
+        align-items: center; /* Center align items */
+    }
 }
