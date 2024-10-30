@@ -1,90 +1,112 @@
-@import '../vars.css';
-
-.navbar{
-    position: relative;
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
-    align-items:center;
-    justify-content:  space-between;
-    padding: 40px;
-    z-index: 2;
-    margin: 0% 10%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5%;
+    background-color: rgba(25, 55, 109, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.title{
-    font-size: 30px;
-    margin-left: -40px;
-    font-weight: 600;
-    color: var(--color-text);
+/* Title styling */
+.title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
     text-decoration: none;
-
-}
-.menu{
-    display: flex;
 }
 
-.menuitem{
-    display: flex;
-    gap: 60px;
+/* Button for toggling menu */
+.menuToggle {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Menu Item Styling */
+.menuitem {
     list-style: none;
+    display: flex;
+    gap: 25px;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
 }
 
-.menuitem a{
-    font-size: 25px;
-    color: var(--color-text);
+/* Link with colorful animation */
+.link {
+    display: block;
+    padding: 10px 15px;
+    color: #ffffff;
     text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
 }
-.menubtn{
-    display: none;
 
+.link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #ff0072, #ff8c00, #ffea00, #00ff72, #0072ff);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+    z-index: -1;
 }
 
-@media screen and (max-width:830px) {
-    .navbar{
-        
-        display: flex;
-        flex-direction:column ;
-        align-items: flex-start;
+.link:hover::before {
+    transform: translateX(0);
+}
 
+/* Active link styling */
+.active {
+    color: #ffa500; /* Highlight color */
+    font-weight: bold;
+}
 
-    }
-    .menu{
-        position: absolute;
-        right: 0;
-        
-        margin-right: -10%;
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 10px;
-        z-index: 3;
-    }
-
-    .menubtn{ 
-        display: block;
-        cursor: pointer;
-    }
-
-    .menuitem{
-        margin-top: 30px;
-        display: none;
+/* Responsive Menu Styling */
+@media screen and (max-width: 830px) {
+    .menuitem {
         flex-direction: column;
         align-items: center;
-        gap:13px ;
-        border-radius: 10px ;
-        background:rgb(25, 55, 109);
-        background: linear-gradient(
-          0deg,
-         rgba(25,  55, 109,0.4) 0%,
-         rgba(25,55,109,1)100%);
-         padding: 24px 33px;
-         box-shadow: 0 0px 0 rgba(0,0,0.25);
-
-
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        background-color: rgba(25, 55, 109, 0.9);
+        width: 100%;
+        transition: max-height 0.5s ease, opacity 0.5s ease;
+        position: absolute; /* Positioning the menu absolutely */
+        top: 60px; /* Below the navbar */
+        left: 0;
     }
 
-    .menuopen{
-        display: flex;
-        z-index: 1;
+    .menuopen {
+        max-height: 300px; /* Set a max height for visibility */
+        opacity: 1;
     }
-    
+
+    .link {
+        padding: 15px;
+        font-size: 1.2rem;
+        text-align: center;
+        width: 100%;
+    }
 }
 
+/* Hide menu toggle button on larger screens */
+@media screen and (min-width: 831px) {
+    .menuToggle {
+        display: none; /* Hide the toggle button */
+    }
+}

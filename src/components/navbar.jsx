@@ -1,34 +1,51 @@
-
-import Reac,{useState,}  from "react";
+import React, { useState, useEffect } from "react";
 import styles from './navbar.module.css';
-import {getImageUrl} from '../utility'
 
-function Nav(){
-    const [menuopen,setMenuOpen] = useState(false)
+function Nav() {
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState("");
 
-    return(
+    // Highlight section in view on scroll
+    useEffect(() => {
+        const handleScroll = () => {
+            const sections = ["About", "experience", "project", "contact"];
+            sections.forEach((section) => {
+                const element = document.getElementById(section);
+                if (element) {
+                    const rect = element.getBoundingClientRect();
+                    if (rect.top <= 100 && rect.bottom >= 100) {
+                        setActiveSection(section);
+                    }
+                }
+            });
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    return (
         <nav className={styles.navbar}>
             <a className={styles.title} href="/">Portfolio</a>
-
-            <div className={styles.menu}>
-                
-                <img className = {styles.menubtn} src={
-                     menuopen ? getImageUrl('nav/closeIcon.png')
-                    :getImageUrl('nav/menuIcon.png')
-                }  
-                alt="menu-button"
-                onClick={()=> setMenuOpen(!menuopen)}
-                />
-
-                <ul className={`${styles.menuitem} ${menuopen && styles.menuopen}`} 
-                onClick={()=> setMenuOpen(false)}>
-
-                    <li><a href="#About">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#project">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
+            <button 
+                className={styles.menuToggle} 
+                onClick={() => setMenuOpen(!menuOpen)}
+                aria-label="Toggle menu"
+            >
+                ☰
+            </button>
+            <ul className={`${styles.menuitem} ${menuOpen ? styles.menuopen : ''}`}>
+                {["About", "experience", "project", "contact"].map((section) => (
+                    <li key={section}>
+                        <a 
+                            href={`#${section}`}
+                            className={`${styles.link} ${activeSection === section ? styles.active : ""}`}
+                            onClick={() => setMenuOpen(false)}  // Close menu on item click
+                        >
+                            {section.charAt(0).toUpperCase() + section.slice(1)}
+                        </a>
+                    </li>
+                ))}
+            </ul>
         </nav>
     );
 }

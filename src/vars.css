@@ -1,16 +1,13 @@
 :root {
     /* colors */
-
-    --color-text : #fff;
-    --color-primary:#576cbc;
+    --color-text: #fff;
+    --color-primary: #576cbc;
     --color-secondary: #19376d;
-    --color-dark:#0b2447;
+    --color-dark: #0b2447;
     --color-bg: rgb(6, 5, 45);
+    --color-accent: #f4a261; /* New accent color */
 
     /* fonts */
-
-    --font-robot:'Roboto';
-    --font-outfit:'Outfit';
-   
-    
+    --font-robot: 'Roboto', sans-serif;
+    --font-outfit: 'Outfit', sans-serif;
 }
